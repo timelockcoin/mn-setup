@@ -1,2 +1,2 @@
 # mn-setup
-Timeclock coin (tym) masternode quick install script
+Timelock coin (tym) masternode quick install script
