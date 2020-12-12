@@ -27,7 +27,7 @@ MAG='\e[1;35m'
 purgeOldInstallation() {
     echo -e "${GREEN}Searching and removing old $COIN_NAME files and configurations${NC}"
     #kill wallet daemon
-  sudo killall $COIN_DAEMON > /dev/null 2>&1
+	sudo killall $COIN_DAEMON > /dev/null 2>&1
     #remove old ufw port allow
     sudo ufw delete allow $COIN_PORT/tcp > /dev/null 2>&1
     #remove old files
@@ -55,7 +55,7 @@ function download_node() {
   cd $TMP_FOLDER >/dev/null 2>&1
   wget -q $COIN_TGZ
   compile_error
-  tar xvzf $COIN_ZIP >/dev/null 2>&1
+  unzip $COIN_ZIP >/dev/null 2>&1
   compile_error
   chmod +x $COIN_DAEMON
   chmod +x $COIN_CLI
